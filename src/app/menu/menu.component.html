@@ -1,0 +1,30 @@
+<!-- <p>menu works!</p> -->
+
+<header>
+    <div>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" >
+
+        <div>
+            <a href="https://www.javatpoint.com" class="navbar-brand">javatpoint</a>
+        </div>
+ 
+    <!-- navigation body is created for adding menus left and right side of the page -->
+
+    <!-- unordered list for left side menu in navigation header -->
+    <ul class="navbar-nav" >
+      <!-- //use routerLink instead of href for saving time in refresh. -->
+        <!-- <li><a href="/login" class="nav-link" >Home</a></li> -->
+        <li><a *ngIf=" hardauth.isUserLoggedIn()" routerLink="/welcome" class="nav-link" >Home</a></li>
+
+        <li><a  *ngIf= "hardauth.isUserLoggedIn()"   routerLink="/list-todos" class="nav-link" >Task</a></li>
+
+    </ul>
+
+
+    <ul  class="navbar-nav navbar-collapse justify-content-end">
+        <li><a *ngIf= "!hardauth.isUserLoggedIn()"  routerLink="/login" class="nav-link" >Login</a></li>
+        <li><a *ngIf= "hardauth.isUserLoggedIn()"  routerLink="/logout"class="nav-link" >Logout</a></li>
+    </ul>
+</nav>
+</div>
+</header>

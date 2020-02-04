@@ -1,0 +1,17 @@
+<!-- <p>login works!</p> -->
+<!-- name <input type="text" name="username" value="{{username}}"/> -->
+<!-- <h1> {{errorMessage}}</h1>   -->
+<!-- see this message with validation  -->
+<small *ngIf='isvalid' class="alert alert-warning"> {{errorMessage}}</small> 
+<h1>Login </h1>
+
+<div class="container">
+name <input type="text" name="username" [(ngModel)]="username">
+
+<!-- password<input type="password" name="password" value="{{password}}"> -->
+
+password<input type="password" name="password" [(ngModel)]="password">
+
+<button (click)=onsubmit()  class="btn btn-success">login </button>
+
+</div>
